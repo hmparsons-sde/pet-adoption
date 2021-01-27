@@ -13,7 +13,7 @@ const pets = [
     specialSkill:
       "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
     type: "dino",
-    imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg",
+    imageUrl: "https://www.urzeitshop.de/10622-tm_thickbox_default/trex-walking-brown-dinosaur-toy-figure-by-papo.jpg",
   },
   {
     name: "Whiskers",
@@ -61,7 +61,7 @@ const pets = [
     specialSkill: "Comfortable in the outdoors for up to eight hours.",
     type: "dino",
     imageUrl:
-      "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg",
+      "https://www.picclickimg.com/d/l400/pict/143669995821_/NEW-LEGO-Animal-Dinosaur-Baby.jpg",
   },
   {
     name: "Sassy",
@@ -69,7 +69,7 @@ const pets = [
     specialSkill: "Adept at talking self and others out of fights.",
     type: "cat",
     imageUrl:
-      "https://tailandfur.com/wp-content/uploads/2015/09/40-Amazing-Cat-Funny-Moment-Pictures-Feature-Image.jpg",
+      "https://i.redd.it/1kl53ca8h5351.jpg",
   },
   {
     name: "Sammy",
@@ -126,7 +126,7 @@ const pets = [
     specialSkill: "Drives at a safe rate of speed in snow or rain.",
     type: "dino",
     imageUrl:
-      "https://images.readwrite.com/wp-content/uploads/2018/03/t-rex-dino-quiz-e1490854556549.jpg",
+      "https://www.wildrepublic.com/wp-content/uploads/2018/11/Triceratops-xl.jpg",
   },
   {
     name: "Muffin",
@@ -142,7 +142,7 @@ const pets = [
     specialSkill: "Proficient in air guitar",
     type: "dino",
     imageUrl:
-      "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg",
+      "https://m.dw.com/image/51635244_401.jpg",
   },
   {
     name: "Callie",
@@ -150,7 +150,7 @@ const pets = [
     specialSkill: "Listens attentively to boring stories.",
     type: "dog",
     imageUrl:
-      "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg",
+      "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47445681/4/?bust=1595788364&width=720",
   },
   {
     name: "Spooky",
@@ -165,7 +165,7 @@ const pets = [
     specialSkill: "Owns a Nintendo Power Glove.",
     type: "dino",
     imageUrl:
-      "https://img.buzzfeed.com/buzzfeed-static/static/2015-11/2/12/enhanced/webdr15/anigif_enhanced-29802-1446485228-10.gif?crop=250:165;0,0&downsize=715",
+      "https://www.seekpng.com/png/detail/341-3417511_playful-red-dino-playful-red-dino-roblox.png",
   },
   {
     name: "Snuggles",
@@ -173,7 +173,7 @@ const pets = [
     specialSkill: "Is comfortable with jokes about his receding hairline.",
     type: "cat",
     imageUrl:
-      "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg",
+      "https://cdn.shopify.com/s/files/1/0344/6469/files/ginger_tabby_1_grande.jpg?v=1598893627",
   },
   {
     name: "Buddy",
@@ -198,7 +198,7 @@ const pets = [
     specialSkill: "Knows the words to 4 rap songs.",
     type: "cat",
     imageUrl:
-      "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg",
+      "https://cache.desktopnexus.com/thumbseg/97/97556-bigthumbnail.jpg",
   },
   {
     name: "Bubba",
@@ -230,7 +230,7 @@ const pets = [
     specialSkill:
       "Gives hugs with appropriate pressure and for the right length of time.",
     type: "cat",
-    imageUrl: "http://img.izismile.com/img/img2/20090219/cats_02.jpg",
+    imageUrl: "https://catsaspets.files.wordpress.com/2010/04/greenpetsecoliving.jpg",
   },
   {
     name: "Lucy",
@@ -238,7 +238,7 @@ const pets = [
     specialSkill: "Doesn’t get weirded out by the word “moist.”",
     type: "dino",
     imageUrl:
-      "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119",
+      "https://previews.123rf.com/images/iimages/iimages1510/iimages151000412/46526044-red-dinosaur-with-spikes-tail-illustration.jpg",
   },
 ];
 
@@ -256,7 +256,7 @@ const petLoop = () => {
                         <p class="card-text">${pets[i].name}</p>
                         <p class="card-text">${pets[i].color}</p>
                         <p class="card-text">${pets[i].specialSkill}</p>
-                        <p class="card-text">${pets[i].type}</p>
+                        <footer class="type">${pets[i].type}</footer>
                       </div>
                     </div>`;
   }
