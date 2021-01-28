@@ -256,9 +256,10 @@ const petLoop = (array) => {
                     <div class="card-body p-0">
                       <p class="fs-5 m-0">${array[i].color}</p>
                       <p class="card-text fs-6">${array[i].specialSkill}</p>
-    </div>
-    <div class="card-footer text-muted">${array[i].type}</div>
-  </div>`;
+                      </div>
+                      <div class="card-footer text-muted">${array[i].type}</div>
+                      <button type="button" id=${i} class="btn btn-outline-danger">Delete</button>
+                    </div>`;
   }
   printToDom("#pet-card-container", domString);
 };
@@ -280,11 +281,23 @@ const handleButtonClick = (e) => {
   
 };
 
+const deletePet = (e) => {
+  const targetType = e.target.type;
+  const targetId = e.target.id;
+
+  if (targetType === 'button') {
+    pets.splice(targetId, 1);
+    petLoop(pets);
+  }
+};
+
+
 const buttonEvents = () => {
   document.querySelector('#all').addEventListener('click', handleButtonClick);
   document.querySelector('#cat').addEventListener('click', handleButtonClick);
   document.querySelector('#dog').addEventListener('click', handleButtonClick);
   document.querySelector('#dino').addEventListener('click', handleButtonClick);
+  document.querySelector('#pet-card-container').addEventListener('click', deletePet);
 };
 
 // Initialization file
