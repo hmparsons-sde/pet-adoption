@@ -13,7 +13,8 @@ const pets = [
     specialSkill:
       "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
     type: "dino",
-    imageUrl: "https://www.urzeitshop.de/10622-tm_thickbox_default/trex-walking-brown-dinosaur-toy-figure-by-papo.jpg",
+    imageUrl:
+      "https://www.urzeitshop.de/10622-tm_thickbox_default/trex-walking-brown-dinosaur-toy-figure-by-papo.jpg",
   },
   {
     name: "Whiskers",
@@ -68,8 +69,7 @@ const pets = [
     color: "Poop-Colored",
     specialSkill: "Adept at talking self and others out of fights.",
     type: "cat",
-    imageUrl:
-      "https://i.redd.it/1kl53ca8h5351.jpg",
+    imageUrl: "https://i.redd.it/1kl53ca8h5351.jpg",
   },
   {
     name: "Sammy",
@@ -141,8 +141,7 @@ const pets = [
     color: "Poop-Colored",
     specialSkill: "Proficient in air guitar",
     type: "dino",
-    imageUrl:
-      "https://m.dw.com/image/51635244_401.jpg",
+    imageUrl: "https://m.dw.com/image/51635244_401.jpg",
   },
   {
     name: "Callie",
@@ -230,7 +229,8 @@ const pets = [
     specialSkill:
       "Gives hugs with appropriate pressure and for the right length of time.",
     type: "cat",
-    imageUrl: "https://catsaspets.files.wordpress.com/2010/04/greenpetsecoliving.jpg",
+    imageUrl:
+      "https://catsaspets.files.wordpress.com/2010/04/greenpetsecoliving.jpg",
   },
   {
     name: "Lucy",
@@ -247,21 +247,49 @@ const printToDom = (divId, textToPrint) => {
   selectedDiv.innerHTML = textToPrint;
 };
 
-const petLoop = () => {
-  let domString = "";
-  for (let i = 0; i < pets.length; i++) {
-    domString += `<div class="card my-2" style="width: 18rem;" id=${i}>
-                    <div class="img-container" style="background-image: url('${pets[i].imageUrl}');"></div>
-                      <div class="card-body">
-                        <p class="card-text">${pets[i].name}</p>
-                        <p class="card-text">${pets[i].color}</p>
-                        <p class="card-text">${pets[i].specialSkill}</p>
-                        <footer class="type">${pets[i].type}</footer>
-                      </div>
-                    </div>`;
+const petLoop = (array) => {
+  let domString = '';
+  for (let i = 0; i < array.length; i++) {
+    domString += `<div class="card text-center my-5" style="width: 15rem;" id=${i}>
+                      <div class="card-header">${array[i].name}</div>
+                      <div class="card-image my-2"><img src=${array[i].imageUrl} alt="cat" class="card-image img-thumbnail w-75"></div>
+                    <div class="card-body p-0">
+                      <p class="fs-5 m-0">${array[i].color}</p>
+                      <p class="card-text fs-6">${array[i].specialSkill}</p>
+    </div>
+    <div class="card-footer text-muted">${array[i].type}</div>
+  </div>`;
   }
-
-  printToDom("#pets", domString);
-  console.log(domString);
+  printToDom("#pet-card-container", domString);
 };
-petLoop(pets);
+
+const handleButtonClick = (e) => {
+  const buttonId = e.target.id;
+  const selectedPets = [];
+
+  for (let i = 0; i < pets.length; i++) {
+    if (pets[i].type === buttonId) {
+      selectedPets.push(pets[i]);
+    }
+    
+  }
+  petLoop(selectedPets);
+  if (buttonId === 'all') {
+    petLoop(pets);
+  }
+  
+};
+
+const buttonEvents = () => {
+  document.querySelector('#all').addEventListener('click', handleButtonClick);
+  document.querySelector('#cat').addEventListener('click', handleButtonClick);
+  document.querySelector('#dog').addEventListener('click', handleButtonClick);
+  document.querySelector('#dino').addEventListener('click', handleButtonClick);
+};
+
+// Initialization file
+const init = () => {
+  petLoop(pets);
+  buttonEvents();
+};
+init();
