@@ -245,6 +245,8 @@ const pets = [
   },
 ];
 
+//PRINT TO DOM
+
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
   selectedDiv.innerHTML = textToPrint;
@@ -286,6 +288,8 @@ const handleButtonClick = (e) => {
   
 };
 
+//DELETE BUTTON - danger - no "are you sure" warning
+
 const deletePet = (e) => {
   const targetType = e.target.type;
   const targetId = e.target.id;
@@ -296,6 +300,7 @@ const deletePet = (e) => {
   }
 };
 
+//BUTTONS ON BUTTONS
 
 const buttonEvents = () => {
   document.querySelector('#all').addEventListener('click', handleButtonClick);
@@ -304,6 +309,8 @@ const buttonEvents = () => {
   document.querySelector('#dino').addEventListener('click', handleButtonClick);
   document.querySelector('#pet-card-container').addEventListener('click', deletePet);
 };
+
+//INITIALIZE - do this after declaring all values - at run time.
 
 const init = () => {
   petLoop(pets);
