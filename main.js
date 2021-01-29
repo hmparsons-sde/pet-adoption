@@ -250,12 +250,12 @@ const printToDom = (divId, textToPrint) => {
 const petLoop = (array) => {
   let domString = '';
   for (let i = 0; i < array.length; i++) {
-    domString += `<div class="card text-center my-5" style="width: 15rem;" id=${i}>
-                      <div class="card-header">${array[i].name}</div>
-                      <div class="card-image my-2"><img src=${array[i].imageUrl} alt="cat" class="card-image img-thumbnail w-75"></div>
+    domString += `<div class="card text-center" style="width: 10rem;" id=${i}>
+                      <div class="card-header fw-bold">${array[i].name}</div>
+                      <div class="card-image my-2"><img src=${array[i].imageUrl} alt="Animal" class="card-image img-thumbnail w-75"></div>
                     <div class="card-body p-0">
-                      <p class="fs-5 m-0">${array[i].color}</p>
-                      <p class="card-text fs-6">${array[i].specialSkill}</p>
+                      <p class="fs-6 m-2">${array[i].color}</p>
+                      <p class="card-text fs-6 m-2">${array[i].specialSkill}</p>
     </div>
     <div class="card-footer text-muted">${array[i].type}</div>
   </div>`;
@@ -266,6 +266,8 @@ const petLoop = (array) => {
 const handleButtonClick = (e) => {
   const buttonId = e.target.id;
   const selectedPets = [];
+
+//FILTER & SORT
 
   for (let i = 0; i < pets.length; i++) {
     if (pets[i].type === buttonId) {
@@ -287,7 +289,6 @@ const buttonEvents = () => {
   document.querySelector('#dino').addEventListener('click', handleButtonClick);
 };
 
-// Initialization file
 const init = () => {
   petLoop(pets);
   buttonEvents();

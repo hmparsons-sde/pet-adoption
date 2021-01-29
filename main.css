@@ -2,13 +2,19 @@ body {
   background-color: bisque;
 }
 
-.img-container {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
+button {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  left: 60px;
+  top: 67px;
 }
 
-.footer {
-    background-color: lightsalmon;
-    color: darkgrey;
+.pet-card-container {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  left: 378px;
+  top: 191px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
