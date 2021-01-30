@@ -24,10 +24,10 @@ As a user, I can filter available pets by the species I want. If I decide to ado
 
 **SCREENSHOTS:**
 
-- ![Homepage view]
-- ![Cat Filter]
-- ![Delete Button]
-- ![Delete Results] 
+![ALL](https://user-images.githubusercontent.com/67122062/106347345-620a1d80-6283-11eb-90d0-44b26d9bef4a.png)
+![CAT FILTER](https://user-images.githubusercontent.com/67122062/106347350-68989500-6283-11eb-88a6-5da7a64a62a9.png)
+![DELETEBUTTON](https://user-images.githubusercontent.com/67122062/106347354-6e8e7600-6283-11eb-9488-7c7819e9c53f.png)
+![DELETE RESULT - no more orange dino](https://user-images.githubusercontent.com/67122062/106347358-72ba9380-6283-11eb-9afa-5f1f8536db9f.png)
 
 **REVIEWERS:**
 
@@ -38,7 +38,7 @@ As a user, I can filter available pets by the species I want. If I decide to ado
 
 **LOOM VIDEO:**
 
-- 
+- https://www.loom.com/share/3e7520da178d4166985829d5e05fa184
 
 **NETLIFY APP**
 

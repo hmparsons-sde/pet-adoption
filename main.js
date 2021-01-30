@@ -265,6 +265,7 @@ const petLoop = (array) => {
   }
   printToDom("#pet-card-container", domString);
 };
+petLoop(pets);
 
 const handleButtonClick = (e) => {
   const buttonId = e.target.id;
