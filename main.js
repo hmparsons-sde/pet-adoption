@@ -1,6 +1,3 @@
-var appRoot = require('app-root-path');
-var myModule = require(appRoot + '/lib/my-module.js');
-
 const pets = [
   {
     name: "Dusty",
