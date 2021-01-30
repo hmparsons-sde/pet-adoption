@@ -9,7 +9,6 @@ This pet adoption site displays available animals for rescue. The user can filte
 **LINKS:**
 
 - Project: github.com/hmparsons-sde/pet-adoption/projects/1
-- Figma:
 
 **USER STORY:**
 
